@@ -1,0 +1,66 @@
+{
+  "name": "hash",
+  "version": "1.0.0",
+  "description": "hash plugin",
+  "author": "InkSha",
+  "license": "MIT",
+  "repo": {
+    "url": "https://github.com/summink/sumi-plugin-hash"
+  },
+  "readme": "README.md",
+  "platforms": [
+    {
+      "os": "windows",
+      "arch": "amd64"
+    },
+    {
+      "os": "windows",
+      "arch": "x86"
+    },
+    {
+      "os": "linux",
+      "arch": "amd64"
+    },
+    {
+      "os": "macos",
+      "arch": "amd64"
+    }
+  ],
+  "commands": [
+    {
+      "name": "hash",
+      "description": "calculate hash value",
+      "arguments": [
+        {
+          "name": "value",
+          "description": "the value to hash",
+          "type": "string"
+        },
+        {
+          "name": "--file",
+          "description": "if set, value is treated as a file path",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "--mode",
+          "description": "the hash method",
+          "default": "sha256",
+          "type": "enum",
+          "value": [
+            "md5",
+            "sha1",
+            "sha256",
+            "sha512"
+          ]
+        },
+        {
+          "name": "--copy",
+          "description": "if set, the hash content is copied to the clipboard",
+          "type": "boolean",
+          "default": false
+        }
+      ]
+    }
+  ]
+}
