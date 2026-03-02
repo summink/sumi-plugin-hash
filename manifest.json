@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/InkSha/sumi/refs/heads/master/schema/v1/plugin.schema.json",
   "name": "sumi-plugin-hash",
   "version": "1.0.0",
   "description": "hash plugin",
@@ -24,5 +25,35 @@
       "arch": "amd64"
     }
   ],
-  "tags": ["hash"]
+  "tags": [
+    "hash"
+  ],
+  "args": [
+    {
+      "name": "value",
+      "type": "string",
+      "description": "value to hash",
+      "required": true
+    }
+  ],
+  "flags": [
+    {
+      "name": "file",
+      "type": "string",
+      "description": "file to hash",
+      "required": false
+    },
+    {
+      "name": "mode",
+      "type": "string",
+      "description": "hash mode",
+      "required": false
+    },
+    {
+      "name": "copy",
+      "type": "bool",
+      "description": "copy hash to clipboard",
+      "required": false
+    }
+  ]
 }
