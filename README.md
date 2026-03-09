@@ -13,7 +13,7 @@ sumi plugin add hash@latest
 ## Usage
 
 ```bash
-sumi hash [value] --file --mode [mode] --copy
+sumi hash [value] --file --mode [mode] --copy -v [verify hash]
 ```
 
 ### Arguments
@@ -30,3 +30,5 @@ sumi hash [value] --file --mode [mode] --copy
   - Valid values: `md5`, `sha1`, `sha256`, `sha512`
 
 - `--copy` - If set, the hash content is copied to the clipboard.
+
+- `--verify` - The hash value to verify.
